@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "203251492751",
+    "project_id": "waiterbar-3208a",
+    "storage_bucket": "waiterbar-3208a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203251492751:android:9e559f721402992ba04dfa",
+        "android_client_info": {
+          "package_name": "com.example.waiterbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203251492751-a8hsrntibdhme0r71tqvi02krs8vkpt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw45tDANuO1vGo13wejjdF7zOf-w5PxgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203251492751-a8hsrntibdhme0r71tqvi02krs8vkpt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
