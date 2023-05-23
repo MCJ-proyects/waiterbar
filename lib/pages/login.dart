@@ -4,6 +4,7 @@ import 'package:waiterbar/components/textfield.dart';
 
 import '../components/boton.dart';
 import '../components/cuadrado.dart';
+import '../services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
@@ -260,10 +261,13 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 25),
           
                 //google sign in button
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Cuadrado(rutaFoto: 'lib/images/google.png'),
+                    Cuadrado(
+                      onTap:() => AuthService().signInWithGoogle(),
+                      rutaFoto: 'lib/images/google.png'
+                    ),
                   ],
                 ),
           
