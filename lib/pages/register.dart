@@ -1,9 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:waiterbar/components/textfield.dart';
 
 import '../components/boton.dart';
 import '../components/cuadrado.dart';
+import '../services/auth_service.dart';
 
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
@@ -15,6 +17,8 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
 
+  final nombreController = TextEditingController();
+  final apellidosController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
@@ -40,6 +44,15 @@ class _RegisterPageState extends State<RegisterPage> {
           email: emailController.text,
           password: passwordController.text,
         );
+        final user = FirebaseAuth.instance.currentUser;
+        await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user?.uid)
+          .set({
+            'nombre': nombreController.text,
+            'apellidos': apellidosController.text,
+            'email': emailController.text,
+          });
       } else {
         Navigator.pop(context);
         passwordError();
@@ -186,6 +199,18 @@ class _RegisterPageState extends State<RegisterPage> {
           
                 const SizedBox(height: 25),
           
+                ModTextField(
+                  controller: nombreController,
+                  hintText: 'Nombre',
+                  obscureText: false,
+                  prefixIcon: const Icon(Icons.drive_file_rename_outline_sharp),
+                ),
+                ModTextField(
+                  controller: apellidosController,
+                  hintText: 'Apellidos',
+                  obscureText: false,
+                  prefixIcon: const Icon(Icons.drive_file_rename_outline_sharp),
+                ),
                 //email
                 ModTextField(
                   controller: emailController,
@@ -280,10 +305,13 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(height: 25),
           
                 //google sign in button
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Cuadrado(rutaFoto: 'lib/images/google.png'),
+                    Cuadrado(
+                      onTap:() => AuthService().signInWithGoogle(),
+                      rutaFoto: 'lib/images/google.png'
+                    ),
                   ],
                 ),
           
