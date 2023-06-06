@@ -247,29 +247,30 @@ class _BarMenuState extends State<BarMenu> {
 
   // Define una función que construye una columna de listas de elementos y devuelve un widget
   Widget _buildMenu() {
-
     // Devuelve una Columna que contiene tres listas de elementos: tapas, bebidas y postres
-    return Column(
-      children: [
-        _buildList(
-          tapas,
-          (index) => sumar(index, 'tapas'),
-          'No hay tapas disponibles en este establecimiento',
-          'Tapas:',
-        ),
-        _buildList(
-          bebidas,
-          (index) => sumar(index, 'bebidas'),
-          'No hay bebidas disponibles en este establecimiento',
-          'Bebidas:',
-        ),
-        _buildList(
-          postres,
-          (index) => sumar(index, 'postres'),
-          'No hay postres disponibles en este establecimiento',
-          'Postres:',
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          _buildList(
+            tapas,
+            (index) => sumar(index, 'tapas'),
+            'No hay tapas disponibles en este establecimiento',
+            'Tapas:',
+          ),
+          _buildList(
+            bebidas,
+            (index) => sumar(index, 'bebidas'),
+            'No hay bebidas disponibles en este establecimiento',
+            'Bebidas:',
+          ),
+          _buildList(
+            postres,
+            (index) => sumar(index, 'postres'),
+            'No hay postres disponibles en este establecimiento',
+            'Postres:',
+          ),
+        ],
+      ),
     );
   }
 
