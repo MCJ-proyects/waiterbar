@@ -33,3 +33,5 @@ WaiterBar – Carta al momento es una aplicación enfocada para bares y restaura
    4. Vamos a file -> open folder y abrimos la carpeta del proyecto
    5. Para abrir el emulador de Android, nos vamos a la parte inferior derecha, clicamos donde pone "Windows (windows-x64)" y seleccionamos "Start (nombre del emulador)" EN MODO COLD BOOT
    6. Nos vamos al archivo "main.dart" y le damos al botón de iniciar, justo en la parte superior derecha
+
+Si hay alguna duda de como montarlo, aquí dejo una [guia de como montar un proyecto Flutter](https://docs.flutter.dev/get-started/install/windows)
