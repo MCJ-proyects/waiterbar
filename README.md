@@ -12,7 +12,7 @@ WaiterBar – Carta al momento es una aplicación enfocada para bares y restaura
 3. En esa misma dirección, ejecutar el comando `flutter doctor` para comprobar que todo está correctamente instalado, en caso contrario seguir las instrucciones que se indican en la respuesta de este
 4. Descargar el .zip del proyecto y extraer la carpeta
    
-5. Si se ejecuta en Android Studio:
+5. **Si se ejecuta en Android Studio:**
    
    1. Habilitar la aceleración de MV en tu ordenador
    2. Iniciar Android Studio, clic en el icono de "Device Manager" y seleccionar "Create Device" en la opción "Virtual"
@@ -25,7 +25,7 @@ WaiterBar – Carta al momento es una aplicación enfocada para bares y restaura
    9. Ir al archivo "pubspec.yaml" y darle a "Pub get" en la parte superior derecha
    10. Finalmente, ejecutar el programa desde "main.dart"
    
-6. Si se ejecuta en Visual Studio Code:
+6. **Si se ejecuta en Visual Studio Code:**
    
    1. Ir al panel de "extensiones" y descargar las extensiones "Dart" y "Flutter"
    2. Pulsar F1 y escribir "Flutter: Run Flutter Doctor"
