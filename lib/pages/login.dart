@@ -232,21 +232,7 @@ class _LoginPageState extends State<LoginPage> {
                     prefixIcon: const Icon(Icons.password),
                   ),
 
-                  const SizedBox(height: 5),
-
-                  // Botón para olvidar contraseña
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      '¿Olvidaste tu contraseña?',
-                      style: TextStyle(
-                        color: Colors.grey[700],
-                        fontSize: 13,
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 15),
 
                   // Botón para iniciar sesión
                   Boton(
@@ -272,7 +258,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: const Text(
                             ' Regístrate',
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Color.fromARGB(255, 33, 243, 47),
                               fontWeight: FontWeight.bold,
                               fontSize: 13,
                             )
@@ -281,7 +267,7 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
 
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 30),
 
                   // Botón de inicio de sesión con Google
                   Padding(
@@ -311,7 +297,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
 
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 30),
 
                   // Botón de inicio de sesión con Google
                   Row(
