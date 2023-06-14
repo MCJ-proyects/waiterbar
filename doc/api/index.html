@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 6.2.1">
+  <meta name="description" content="waiterbar API docs, for the Dart programming language.">
+  <title>waiterbar - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">waiterbar package</li>
+  </ol>
+  <div class="self-name">waiterbar</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="waiterbar-carta-al-momento">Waiterbar, Carta al momento</h1>
+<p>WaiterBar – Carta al momento es una aplicación enfocada para bares y restaurantes, este “agilizará” el proceso de pedido de comandas de los clientes en todos los bares / restaurantes en el que esté el servicio contratado pidiendolo todo a traves de la app.</p>
+<h2 id="herramientas-necesarias-para-la-implementacin-del-proyecto">Herramientas necesarias para la implementación del proyecto</h2>
+<ul>
+<li>Visual Studio Code / Android Studio</li>
+<li>(Para VSC) La extensión "Dart" y "Flutter"</li>
+<li><a href="https://docs.flutter.dev/get-started/install/windows">Flutter SDK</a></li>
+</ul>
+<h2 id="pasos-para-montar-el-proyecto">Pasos para montar el proyecto</h2>
+<ol>
+<li>
+<p>Instalar el SDK de Flutter <a href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.10.4-stable.zip">aquí</a></p>
+</li>
+<li>
+<p>Extraer el archivo zip y colocar el flutter en la localización deseada para la instalación del SDK (por ejemplo, C:\src\flutter)</p>
+</li>
+<li>
+<p>En esa misma dirección, ejecutar el comando <code>flutter doctor</code> para comprobar que todo está correctamente instalado, en caso contrario seguir las instrucciones que se indican en la respuesta de este</p>
+</li>
+<li>
+<p>Descargar el .zip del proyecto y extraer la carpeta</p>
+</li>
+<li>
+<p><strong>Si se ejecuta en Android Studio:</strong></p>
+<ol>
+<li>Habilitar la aceleración de MV en tu ordenador</li>
+<li>Iniciar Android Studio, clic en el icono de "Device Manager" y seleccionar "Create Device" en la opción "Virtual"</li>
+<li>Seleccionar una definición de dispositivo y presiona "next"</li>
+<li>Selecciona una imagen del sistema de la versión de Android que quieres emular (recomendado versión 12) y selecciona "next"</li>
+<li>En "Emulated Performance", selecciona "Hardware - GLES 2.0" para habilitar la aceleración de hardware</li>
+<li>Abrir una consola de comandos con permisos de administrador e introducir el siguiente comando: <code>flutter doctor --android-licenses</code></li>
+<li>Al abrir el proyecto en Android Studio, arrastrar la carpeta del proyecto al menú de "proyects" o darle a "open" y abrir la carpeta del proyecto</li>
+<li>En "Preferences -&gt; Languages &amp; Frameworks -&gt; Flutter -&gt; Flutter SDK path" añadir la carpeta donde está guardado el SDK</li>
+<li>Ir al archivo "pubspec.yaml" y darle a "Pub get" en la parte superior derecha</li>
+<li>Finalmente, ejecutar el programa desde "main.dart"</li>
+</ol>
+</li>
+<li>
+<p><strong>Si se ejecuta en Visual Studio Code:</strong></p>
+<ol>
+<li>Ir al panel de "extensiones" y descargar las extensiones "Dart" y "Flutter"</li>
+<li>Pulsar F1 y escribir "Flutter: Run Flutter Doctor"</li>
+<li>Comprobar que todo esta correctamente, en caso contrario, realizar lo que el comando le pide para arreglar los errores</li>
+<li>Vamos a file -&gt; open folder y abrimos la carpeta del proyecto</li>
+<li>Para abrir el emulador de Android, nos vamos a la parte inferior derecha, clicamos donde pone "Windows (windows-x64)" y seleccionamos "Start (nombre del emulador)" EN MODO COLD BOOT</li>
+<li>Nos vamos al archivo "main.dart" y le damos al botón de iniciar, justo en la parte superior derecha</li>
+</ol>
+</li>
+</ol>
+<p>Si hay alguna duda de como montarlo, aquí dejo una <a href="https://docs.flutter.dev/get-started/install/windows">guia de como montar un proyecto Flutter</a></p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="auth_page">
+  <span class="name"><a href="pages_auth_page/pages_auth_page-library.html">auth_page</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="auth_service">
+  <span class="name"><a href="services_auth_service/services_auth_service-library.html">auth_service</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="barMenu">
+  <span class="name"><a href="pages_barMenu/pages_barMenu-library.html">barMenu</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="boton">
+  <span class="name"><a href="components_boton/components_boton-library.html">boton</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="cuadrado">
+  <span class="name"><a href="components_cuadrado/components_cuadrado-library.html">cuadrado</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="firebase_options">
+  <span class="name"><a href="firebase_options/firebase_options-library.html">firebase_options</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="header">
+  <span class="name"><a href="components_header/components_header-library.html">header</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="home_page">
+  <span class="name"><a href="pages_home_page/pages_home_page-library.html">home_page</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="login">
+  <span class="name"><a href="pages_login/pages_login-library.html">login</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="login_or_register_page">
+  <span class="name"><a href="pages_login_or_register_page/pages_login_or_register_page-library.html">login_or_register_page</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="main">
+  <span class="name"><a href="main/main-library.html">main</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="pago">
+  <span class="name"><a href="pages_pago/pages_pago-library.html">pago</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="register">
+  <span class="name"><a href="pages_register/pages_register-library.html">register</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="scanner">
+  <span class="name"><a href="scanner/scanner-library.html">scanner</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="textfield">
+  <span class="name"><a href="components_textfield/components_textfield-library.html">textfield</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="user_profile">
+  <span class="name"><a href="pages_user_profile/pages_user_profile-library.html">user_profile</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li class="self-crumb">waiterbar package</li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">waiterbar</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="pages_auth_page/pages_auth_page-library.html">auth_page</a></li>
+      <li><a href="services_auth_service/services_auth_service-library.html">auth_service</a></li>
+      <li><a href="pages_barMenu/pages_barMenu-library.html">barMenu</a></li>
+      <li><a href="components_boton/components_boton-library.html">boton</a></li>
+      <li><a href="components_cuadrado/components_cuadrado-library.html">cuadrado</a></li>
+      <li><a href="firebase_options/firebase_options-library.html">firebase_options</a></li>
+      <li><a href="components_header/components_header-library.html">header</a></li>
+      <li><a href="pages_home_page/pages_home_page-library.html">home_page</a></li>
+      <li><a href="pages_login/pages_login-library.html">login</a></li>
+      <li><a href="pages_login_or_register_page/pages_login_or_register_page-library.html">login_or_register_page</a></li>
+      <li><a href="main/main-library.html">main</a></li>
+      <li><a href="pages_pago/pages_pago-library.html">pago</a></li>
+      <li><a href="pages_register/pages_register-library.html">register</a></li>
+      <li><a href="scanner/scanner-library.html">scanner</a></li>
+      <li><a href="components_textfield/components_textfield-library.html">textfield</a></li>
+      <li><a href="pages_user_profile/pages_user_profile-library.html">user_profile</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    waiterbar
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
