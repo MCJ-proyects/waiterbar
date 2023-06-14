@@ -1,11 +1,13 @@
 # Waiterbar, Carta al momento
 
 WaiterBar – Carta al momento es una aplicación enfocada para bares y restaurantes, este “agilizará” el proceso de pedido de comandas de los clientes en todos los bares / restaurantes en el que esté el servicio contratado pidiendolo todo a traves de la app.
+
 ## Herramientas necesarias para la implementación del proyecto
 
 - Visual Studio Code / Android Studio
 - (Para VSC) La extensión "Dart" y "Flutter"
 - [Flutter SDK](https://docs.flutter.dev/get-started/install/windows)
+
 ## Pasos para montar el proyecto
 1. Instalar el SDK de Flutter [aquí](https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.10.4-stable.zip)
 2. Extraer el archivo zip y colocar el flutter en la localización deseada para la instalación del SDK (por ejemplo, C:\src\flutter)
@@ -33,5 +35,13 @@ WaiterBar – Carta al momento es una aplicación enfocada para bares y restaura
    4. Vamos a file -> open folder y abrimos la carpeta del proyecto
    5. Para abrir el emulador de Android, nos vamos a la parte inferior derecha, clicamos donde pone "Windows (windows-x64)" y seleccionamos "Start (nombre del emulador)" EN MODO COLD BOOT
    6. Nos vamos al archivo "main.dart" y le damos al botón de iniciar, justo en la parte superior derecha
+
+## Pasos para ejecutar la documentación
+
+1. Escribir los siguientes comandos:
+   - `dart pub global activate dhttpd`
+   - `dhttpd --path doc/api`
+
+2. Abrir el navegador y poner el siguiente enlace: `http://localhost:8080`
 
 Si hay alguna duda de como montarlo, aquí dejo una [guia de como montar un proyecto Flutter](https://docs.flutter.dev/get-started/install/windows)
